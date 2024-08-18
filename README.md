@@ -36,3 +36,19 @@ while numero > 0:
 
 digitos.reverse()
 ```
+
+**Explicación:**
+
+El objetivo de este programa es tomar un número entero `n` y separar todos los dígitos que lo componen. Para lograrlo, el programa utiliza los operadores módulo `(%)` y división entera `(//)`. Aquí la explicacion:
++ Entrada del usuario: Se solicita al usuario que ingrese un número entero mediante `input()` y se convierte a entero con `int()`.
+
++ Lista digitos: Inicializamos una lista vacía para almacenar los dígitos extraídos.
+
++ Bucle while: Continuamos extrayendo dígitos mientras n sea mayor que cero.
+
+    - Usamos n % 10 para obtener el último dígito del número.
+    - Ese dígito se añade a la lista digitos.
+    - Luego, eliminamos el último dígito del número usando n = n // 10.
++ Salida: Finalmente, se imprime la lista digitos, que contiene los dígitos del número en orden inverso al que se extrajeron.
+
+Es un enfoque simple pero efectivo.

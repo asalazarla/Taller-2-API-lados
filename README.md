@@ -214,9 +214,12 @@ $$\\text{MCM}(a, b) = \frac{|a \times b|}{\text{MCD}(a, b)}\$$
 Donde $$|a x b|$$ es el valor absoluto del producto de los dos numeros.
 
 **Algoritmo de Euclides para el MCD**
+
 El MCD se puede calcular de manera eficiente usando el Algoritmo de Euclides, que se basa en la siguiente idea:
 
-$$\\text{MCD}(a, b) = \text{MCD}(b, a \% b)\$$
+
+$$ MCD(a, b) = MCD(b, a \% b) $$
+
 
 Este proceso se repite hasta que uno de los numeros sea cero, y el otro numero es el MCD.
 

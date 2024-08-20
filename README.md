@@ -215,10 +215,7 @@ Donde $$|a x b|$$ es el valor absoluto del producto de los dos numeros.
 
 **Algoritmo de Euclides para el MCD**
 
-El MCD se puede calcular de manera eficiente usando el Algoritmo de Euclides, que se basa en la siguiente idea:
-
-
-$$ MCD(a, b) = MCD(b, a \% b) $$
+El MCD se puede calcular de manera eficiente usando el Algoritmo de Euclides, que se basa en la siguiente idea: <p>MCD(<em>a</em>, <em>b</em>) = MCD(<em>b</em>, <em>a</em> % <em>b</em>)</p>
 
 
 Este proceso se repite hasta que uno de los numeros sea cero, y el otro numero es el MCD.

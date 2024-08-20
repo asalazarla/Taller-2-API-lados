@@ -78,7 +78,7 @@ else:
     print("La matriz no es magica.")
 ```
 
-**Explicacion:**
+**Explicación:**
 1. Funcion `es_matriz_magica(matriz)`:
    + Parametro: `matriz` es una lista de listas que representa la matriz cuadrada.
    + Variable `n`: Determina el tamaño de la matriz `(n x n)`.
@@ -125,7 +125,7 @@ while numero > 0:
 digitos.reverse()
 ```
 
-**Explicacion:**
+**Explicación:**
 
 El objetivo de este programa es tomar un numero entero `n` y separar todos los digitos que lo componen. Para lograrlo, el programa utiliza los operadores modulo `(%)` y division entera `(//)`. 
 + **Entrada**: Se solicita al usuario que ingrese un numero entero mediante `input()` y se convierte a entero con `int()`.
@@ -146,10 +146,42 @@ ________________________________________
 ### Punto 2.
 
 ```python
+# Ingresar un número flotante
+n = float(input("Ingresa un número flotante: "))
+
+# Obtener la parte entera
+parte_entera = int(n)
+
+# Calcular la parte decimal restando la parte entera
+parte_decimal = n - parte_entera
+
+# Mostrar los dígitos de la parte entera
+print("Dígitos de la parte entera:")
+while parte_entera > 0:
+    digito = parte_entera % 10
+    print(digito)
+    parte_entera //= 10
+
+# Mostrar los dígitos de la parte decimal
+print("Dígitos de la parte decimal:")
+while parte_decimal > 0:
+    parte_decimal *= 10
+    digito = int(parte_decimal)
+    print(digito)
+    parte_decimal -= digito
 ```
 
-**Explicacion:**
+**Explicación:**
 
+Este programa en Python separa un número flotante en su parte entera y decimal, y luego imprime los dígitos de ambas partes.
+
+Ingreso: El usuario ingresa un número flotante.
+Separación: La parte entera se obtiene con int(), y la decimal restando la parte entera del número original.
+Descomposición:
+- Para la parte entera, se extraen los dígitos uno por uno usando el operador % 10 y se eliminan con // 10.
+- Para la parte decimal, se multiplica por 10, se extrae el dígito más significativo, y se elimina del número.
+  
+Este proceso se repite hasta que no queden dígitos en ambas partes.
 _________________________________________
 ### Punto 3. 
 Desarrollar un programa que permita ingresar dos numeros enteros y determinar si se tratan de numeros espejos, definiendo numeros espejos como dos numeros a y b tales que a se lee de izquierda a derecha igual que se lee b de derecha a izquierda, y viceversa.

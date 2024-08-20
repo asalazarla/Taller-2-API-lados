@@ -12,6 +12,13 @@ Coordial saludo, nuestro grupo de Programacion se llama API-lados, a continuacio
 + Alejandro	Urrego Valencia (1000364014)
 __________________________________
 ## Desarrollo 
+### Punto BONO.
+
+```python
+```
+
+**Explicación:**
+________________________________________
 ### Punto 1. 
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
 
@@ -109,7 +116,7 @@ Para resolver el problema:
 
 + **Invertir un número**: Se puede invertir un número al revés usando operaciones matemáticas. Se obtiene el último dígito utilizando el módulo `(%)` y se elimina el último dígito utilizando la división entera `(//)`. Luego, se construye el número invertido sumando estos dígitos en orden inverso.
 + **Comparar los números**: Después de invertir uno de los números, se compara con el otro para determinar si son espejos.
-+ ________________________________________
+________________________________________
 
 ### Punto 4.
 
@@ -120,9 +127,112 @@ Para resolver el problema:
 ________________________________________
 
 ### Punto 5.
+Para determinar el Mínimo Común Múltiplo (MCM) de dos números enteros, podemos usar la relación entre el MCM y el Máximo Común Divisor (MCD) de dos números. Esta relación se expresa como:
+
+$$\\text{MCM}(a, b) = \frac{|a \times b|}{\text{MCD}(a, b)}\$$ 
+
+Donde $$|a x b|$$ es el valor absoluto del producto de los dos números.
+
+**Algoritmo de Euclides para el MCD**
+El MCD se puede calcular de manera eficiente usando el Algoritmo de Euclides, que se basa en la siguiente idea:
+
+$$\\text{MCD}(a, b) = \text{MCD}(b, a \% b)\$$
+
+Este proceso se repite hasta que uno de los números sea cero, y el otro número es el MCD.
+
+
+
+**Enfoque Iterativo**
+
+```python
+def mcd_iterativo(a, b):
+    # usamos el algoritmo de Euclides de manera iterativa
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def mcm(a, b):
+    # se calcula el MCM usando la relacion entre MCM y MCD
+    return abs(a * b) // mcd_iterativo(a, b)
+
+# ingresa dos num enteros
+numero1 = int(input("Ingresa el primer número: "))
+numero2 = int(input("Ingresa el segundo número: "))
+
+# calcula el MCM y lo muestra
+resultado = mcm(numero1, numero2)
+print(f"El Mínimo Común Múltiplo de {numero1} y {numero2} es: {resultado}")
+
+```
+**Enfoque Recursivo**
+
+```python
+def mcd_recursivo(a, b):
+    # usamos el algoritmo de Euclides de manera recursiva
+    if b == 0:
+        return a
+    else:
+        return mcd_recursivo(b, a % b)
+
+def mcm(a, b):
+    # se calcula el MCM usando la relacion entre MCM y MCD
+    return abs(a * b) // mcd_recursivo(a, b)
+
+# ingresa dos num enteros
+numero1 = int(input("Ingresa el primer número: "))
+numero2 = int(input("Ingresa el segundo número: "))
+
+# calcula el MCM y lo muestra
+resultado = mcm(numero1, numero2)
+print(f"El Mínimo Común Múltiplo de {numero1} y {numero2} es: {resultado}")
+```
+
+**Explicación:**
+1. Cálculo del MCD (iterativo y recursivo):
++ *Iterativo*: Utilizamos un ciclo `while` para aplicar el Algoritmo de Euclides. Continuamos intercambiando `a` y `b` con `b` y `a % b` hasta que `b` sea 0. El valor de a en ese momento es el MCD.
++ *Recursivo*: Aplicamos el Algoritmo de Euclides recursivamente. Si `b` es 0, el MCD es a. Si no, llamamos recursivamente a la función con `b` y `a % b`.
+
+2. Cálculo del MCM:
++ Usamos la fórmula $$\\text{MCM}(a, b) = \frac{|a \times b|}{\text{MCD}(a, b)}\$$ para calcular el MCM de los dos números.
++ Utilizamos la función del MCD (ya sea la iterativa o la recursiva) para obtener el MCD y luego calcular el MCM.
+
+3. Entrada:
++ El programa solicita que ingrese dos números enteros y luego calcula y muestra el MCM utilizando las funciones definidas.
+________________________________________
+
+### Punto 6.
 
 ```python
 ```
 
 **Explicación:**
+________________________________________
+### Punto 7.
+
+```python
+```
+
+**Explicación:**
+________________________________________
+### Punto 8.
+
+```python
+```
+
+**Explicación:**
+________________________________________
+### Punto 9.
+
+```python
+```
+
+**Explicación:**
+________________________________________
+### Punto 10.
+
+```python
+```
+
+**Explicación:**
+________________________________________
 
